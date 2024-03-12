@@ -10,6 +10,7 @@ import javax.swing.table.DefaultTableModel;
 import model.AtletaMD;
 import swing.EstiloTabelaColumn;
 import static view.FrmAtleta.*;
+import static view.TelaPrincipal.lbUsConecatado;
 
 /**
  *
@@ -20,6 +21,12 @@ public class AtletaBS {
     AtletaMD atletaMD = new AtletaMD();
     AtletaDao atletaDao = new AtletaDao();
     EstiloTabelaColumn estilotabela = new EstiloTabelaColumn();
+
+    public void habilitarBotoes() {
+        if (lbUsConecatado.getText().equalsIgnoreCase("ADMINSTRADOR")) {
+            btnDeletarTudo.setEnabled(true);
+        }
+    }
 
     // Metodo para Adicionar atleta
     public void adicionarAtleta() {

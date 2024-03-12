@@ -62,18 +62,19 @@ public class FrmExames extends javax.swing.JInternalFrame {
         lbFaixaExame = new swing.JLabelBordas();
         txtDataExame = new javax.swing.JFormattedTextField();
         lbDataExame = new swing.JLabelBordas();
+        txtIdGeral = new app.bolivia.swing.JCTextField();
+        lbIdGeral = new swing.JLabelBordas();
+        txtTotalExame = new app.bolivia.swing.JCTextField();
+        lbTotalExame = new swing.JLabelBordas();
+        txtIdExame = new app.bolivia.swing.JCTextField();
+        lbIdExame = new swing.JLabelBordas();
+        jPanel1 = new javax.swing.JPanel();
+        btnPesquisarExame = new javax.swing.JButton();
         btnAdicionarExame = new javax.swing.JButton();
         btnEditarDataExame = new javax.swing.JButton();
         btnApagarExame = new javax.swing.JButton();
         btnLimparPesquisaExame = new javax.swing.JButton();
         btnImprimirExame = new javax.swing.JButton();
-        txtIdGeral = new app.bolivia.swing.JCTextField();
-        lbIdGeral = new swing.JLabelBordas();
-        txtTotalExame = new app.bolivia.swing.JCTextField();
-        lbTotalExame = new swing.JLabelBordas();
-        btnPesquisarExame = new javax.swing.JButton();
-        txtIdExame = new app.bolivia.swing.JCTextField();
-        lbIdExame = new swing.JLabelBordas();
         jScrollPanePesquisaExame = new javax.swing.JScrollPane();
         jTableFrmExamePesquisaExame = new javax.swing.JTable();
         painelPesquisar = new javax.swing.JPanel();
@@ -224,110 +225,6 @@ public class FrmExames extends javax.swing.JInternalFrame {
         lbDataExame.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
         painelCadastroExame.add(lbDataExame, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 20, 180, 50));
 
-        btnAdicionarExame.setBackground(new java.awt.Color(255, 255, 255));
-        btnAdicionarExame.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        btnAdicionarExame.setForeground(new java.awt.Color(35, 102, 145));
-        btnAdicionarExame.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/adicionar-1-50px.png"))); // NOI18N
-        btnAdicionarExame.setText("ADICIONAR");
-        btnAdicionarExame.setToolTipText("Adicionar data do Exame");
-        btnAdicionarExame.setBorder(null);
-        btnAdicionarExame.setBorderPainted(false);
-        btnAdicionarExame.setContentAreaFilled(false);
-        btnAdicionarExame.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnAdicionarExame.setEnabled(false);
-        btnAdicionarExame.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnAdicionarExame.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/adicionar-2-50px.png"))); // NOI18N
-        btnAdicionarExame.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnAdicionarExame.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAdicionarExameActionPerformed(evt);
-            }
-        });
-        painelCadastroExame.add(btnAdicionarExame, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 80, -1, -1));
-
-        btnEditarDataExame.setBackground(new java.awt.Color(255, 255, 255));
-        btnEditarDataExame.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        btnEditarDataExame.setForeground(new java.awt.Color(35, 102, 145));
-        btnEditarDataExame.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/editar-1-50px.png"))); // NOI18N
-        btnEditarDataExame.setText("EDITAR");
-        btnEditarDataExame.setToolTipText("Editar data do Exame");
-        btnEditarDataExame.setBorder(null);
-        btnEditarDataExame.setBorderPainted(false);
-        btnEditarDataExame.setContentAreaFilled(false);
-        btnEditarDataExame.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnEditarDataExame.setEnabled(false);
-        btnEditarDataExame.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnEditarDataExame.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/editar-2-50px.png"))); // NOI18N
-        btnEditarDataExame.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnEditarDataExame.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEditarDataExameActionPerformed(evt);
-            }
-        });
-        painelCadastroExame.add(btnEditarDataExame, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 80, -1, -1));
-
-        btnApagarExame.setBackground(new java.awt.Color(255, 255, 255));
-        btnApagarExame.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        btnApagarExame.setForeground(new java.awt.Color(35, 102, 145));
-        btnApagarExame.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/apagar-1-50px.png"))); // NOI18N
-        btnApagarExame.setText("APAGAR");
-        btnApagarExame.setToolTipText("Apagar Exame");
-        btnApagarExame.setBorder(null);
-        btnApagarExame.setBorderPainted(false);
-        btnApagarExame.setContentAreaFilled(false);
-        btnApagarExame.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnApagarExame.setEnabled(false);
-        btnApagarExame.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnApagarExame.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/apagar-2-50px.png"))); // NOI18N
-        btnApagarExame.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnApagarExame.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnApagarExameActionPerformed(evt);
-            }
-        });
-        painelCadastroExame.add(btnApagarExame, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, 80, -1, -1));
-
-        btnLimparPesquisaExame.setBackground(new java.awt.Color(255, 255, 255));
-        btnLimparPesquisaExame.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        btnLimparPesquisaExame.setForeground(new java.awt.Color(35, 102, 145));
-        btnLimparPesquisaExame.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/limpar-1-50px.png"))); // NOI18N
-        btnLimparPesquisaExame.setText("LIMPAR");
-        btnLimparPesquisaExame.setBorder(null);
-        btnLimparPesquisaExame.setBorderPainted(false);
-        btnLimparPesquisaExame.setContentAreaFilled(false);
-        btnLimparPesquisaExame.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnLimparPesquisaExame.setEnabled(false);
-        btnLimparPesquisaExame.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnLimparPesquisaExame.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/limpar-2-50px.png"))); // NOI18N
-        btnLimparPesquisaExame.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnLimparPesquisaExame.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLimparPesquisaExameActionPerformed(evt);
-            }
-        });
-        painelCadastroExame.add(btnLimparPesquisaExame, new org.netbeans.lib.awtextra.AbsoluteConstraints(1160, 80, -1, -1));
-
-        btnImprimirExame.setBackground(new java.awt.Color(255, 255, 255));
-        btnImprimirExame.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        btnImprimirExame.setForeground(new java.awt.Color(35, 102, 145));
-        btnImprimirExame.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/print-1-50px.png"))); // NOI18N
-        btnImprimirExame.setText("IMPRIMIR");
-        btnImprimirExame.setToolTipText("Imprimir Exame");
-        btnImprimirExame.setBorder(null);
-        btnImprimirExame.setBorderPainted(false);
-        btnImprimirExame.setContentAreaFilled(false);
-        btnImprimirExame.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnImprimirExame.setEnabled(false);
-        btnImprimirExame.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnImprimirExame.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/print-2-50px.png"))); // NOI18N
-        btnImprimirExame.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnImprimirExame.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnImprimirExameActionPerformed(evt);
-            }
-        });
-        painelCadastroExame.add(btnImprimirExame, new org.netbeans.lib.awtextra.AbsoluteConstraints(1230, 80, -1, -1));
-
         txtIdGeral.setEditable(false);
         txtIdGeral.setBackground(new java.awt.Color(34, 102, 145));
         txtIdGeral.setBorder(null);
@@ -368,26 +265,6 @@ public class FrmExames extends javax.swing.JInternalFrame {
         lbTotalExame.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
         painelCadastroExame.add(lbTotalExame, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 120, 50));
 
-        btnPesquisarExame.setBackground(new java.awt.Color(255, 255, 255));
-        btnPesquisarExame.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        btnPesquisarExame.setForeground(new java.awt.Color(35, 102, 145));
-        btnPesquisarExame.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/pesquisar-1-50px.png"))); // NOI18N
-        btnPesquisarExame.setText("PESQUISAR");
-        btnPesquisarExame.setToolTipText("Adicionar data do Exame");
-        btnPesquisarExame.setBorder(null);
-        btnPesquisarExame.setBorderPainted(false);
-        btnPesquisarExame.setContentAreaFilled(false);
-        btnPesquisarExame.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnPesquisarExame.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnPesquisarExame.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/pesquisar-2-50px.png"))); // NOI18N
-        btnPesquisarExame.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnPesquisarExame.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPesquisarExameActionPerformed(evt);
-            }
-        });
-        painelCadastroExame.add(btnPesquisarExame, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 80, -1, -1));
-
         txtIdExame.setEditable(false);
         txtIdExame.setBackground(new java.awt.Color(34, 102, 145));
         txtIdExame.setBorder(null);
@@ -407,6 +284,135 @@ public class FrmExames extends javax.swing.JInternalFrame {
         lbIdExame.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
         lbIdExame.setRequestFocusEnabled(false);
         painelCadastroExame.add(lbIdExame, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 90, 140, 50));
+
+        jPanel1.setOpaque(false);
+        jPanel1.setLayout(new java.awt.GridLayout());
+
+        btnPesquisarExame.setBackground(new java.awt.Color(255, 255, 255));
+        btnPesquisarExame.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnPesquisarExame.setForeground(new java.awt.Color(35, 102, 145));
+        btnPesquisarExame.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/pesquisar-1-50px.png"))); // NOI18N
+        btnPesquisarExame.setText("PESQUISAR");
+        btnPesquisarExame.setToolTipText("Adicionar data do Exame");
+        btnPesquisarExame.setBorder(null);
+        btnPesquisarExame.setBorderPainted(false);
+        btnPesquisarExame.setContentAreaFilled(false);
+        btnPesquisarExame.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnPesquisarExame.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnPesquisarExame.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/pesquisar-2-50px.png"))); // NOI18N
+        btnPesquisarExame.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnPesquisarExame.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPesquisarExameActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnPesquisarExame);
+
+        btnAdicionarExame.setBackground(new java.awt.Color(255, 255, 255));
+        btnAdicionarExame.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnAdicionarExame.setForeground(new java.awt.Color(35, 102, 145));
+        btnAdicionarExame.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/adicionar-1-50px.png"))); // NOI18N
+        btnAdicionarExame.setText("ADICIONAR");
+        btnAdicionarExame.setToolTipText("Adicionar data do Exame");
+        btnAdicionarExame.setBorder(null);
+        btnAdicionarExame.setBorderPainted(false);
+        btnAdicionarExame.setContentAreaFilled(false);
+        btnAdicionarExame.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnAdicionarExame.setEnabled(false);
+        btnAdicionarExame.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnAdicionarExame.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/adicionar-2-50px.png"))); // NOI18N
+        btnAdicionarExame.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnAdicionarExame.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAdicionarExameActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnAdicionarExame);
+
+        btnEditarDataExame.setBackground(new java.awt.Color(255, 255, 255));
+        btnEditarDataExame.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnEditarDataExame.setForeground(new java.awt.Color(35, 102, 145));
+        btnEditarDataExame.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/editar-1-50px.png"))); // NOI18N
+        btnEditarDataExame.setText("EDITAR");
+        btnEditarDataExame.setToolTipText("Editar data do Exame");
+        btnEditarDataExame.setBorder(null);
+        btnEditarDataExame.setBorderPainted(false);
+        btnEditarDataExame.setContentAreaFilled(false);
+        btnEditarDataExame.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnEditarDataExame.setEnabled(false);
+        btnEditarDataExame.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnEditarDataExame.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/editar-2-50px.png"))); // NOI18N
+        btnEditarDataExame.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnEditarDataExame.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEditarDataExameActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnEditarDataExame);
+
+        btnApagarExame.setBackground(new java.awt.Color(255, 255, 255));
+        btnApagarExame.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnApagarExame.setForeground(new java.awt.Color(35, 102, 145));
+        btnApagarExame.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/apagar-1-50px.png"))); // NOI18N
+        btnApagarExame.setText("APAGAR");
+        btnApagarExame.setToolTipText("Apagar Exame");
+        btnApagarExame.setBorder(null);
+        btnApagarExame.setBorderPainted(false);
+        btnApagarExame.setContentAreaFilled(false);
+        btnApagarExame.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnApagarExame.setEnabled(false);
+        btnApagarExame.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnApagarExame.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/apagar-2-50px.png"))); // NOI18N
+        btnApagarExame.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnApagarExame.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnApagarExameActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnApagarExame);
+
+        btnLimparPesquisaExame.setBackground(new java.awt.Color(255, 255, 255));
+        btnLimparPesquisaExame.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnLimparPesquisaExame.setForeground(new java.awt.Color(35, 102, 145));
+        btnLimparPesquisaExame.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/limpar-1-50px.png"))); // NOI18N
+        btnLimparPesquisaExame.setText("LIMPAR");
+        btnLimparPesquisaExame.setBorder(null);
+        btnLimparPesquisaExame.setBorderPainted(false);
+        btnLimparPesquisaExame.setContentAreaFilled(false);
+        btnLimparPesquisaExame.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnLimparPesquisaExame.setEnabled(false);
+        btnLimparPesquisaExame.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnLimparPesquisaExame.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/limpar-2-50px.png"))); // NOI18N
+        btnLimparPesquisaExame.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnLimparPesquisaExame.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimparPesquisaExameActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnLimparPesquisaExame);
+
+        btnImprimirExame.setBackground(new java.awt.Color(255, 255, 255));
+        btnImprimirExame.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnImprimirExame.setForeground(new java.awt.Color(35, 102, 145));
+        btnImprimirExame.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/print-1-50px.png"))); // NOI18N
+        btnImprimirExame.setText("IMPRIMIR");
+        btnImprimirExame.setToolTipText("Imprimir Exame");
+        btnImprimirExame.setBorder(null);
+        btnImprimirExame.setBorderPainted(false);
+        btnImprimirExame.setContentAreaFilled(false);
+        btnImprimirExame.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnImprimirExame.setEnabled(false);
+        btnImprimirExame.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnImprimirExame.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/print-2-50px.png"))); // NOI18N
+        btnImprimirExame.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnImprimirExame.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnImprimirExameActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnImprimirExame);
+
+        painelCadastroExame.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 70, 610, 80));
 
         painelPrincipal.add(painelCadastroExame, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 1320, 160));
 
@@ -683,6 +689,7 @@ public class FrmExames extends javax.swing.JInternalFrame {
     private javax.swing.ButtonGroup buttonGroupExame;
     public static org.bolivia.combo.SComboBoxBlue cmbClubeExame;
     public static org.bolivia.combo.SComboBoxBlue cmbFaixaExame;
+    private javax.swing.JPanel jPanel1;
     public static javax.swing.JRadioButton jRadioBtnCBKSCExame;
     public static javax.swing.JRadioButton jRadioBtnDangayExame;
     public static javax.swing.JRadioButton jRadioBtnYudanshaExame;

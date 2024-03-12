@@ -155,7 +155,7 @@ public class FrmUsuarios extends javax.swing.JInternalFrame {
         painelOpcoes.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "OPÇÕES", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12), new java.awt.Color(35, 102, 145))); // NOI18N
         painelOpcoes.setForeground(new java.awt.Color(35, 102, 145));
         painelOpcoes.setPreferredSize(new java.awt.Dimension(800, 130));
-        painelOpcoes.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        painelOpcoes.setLayout(new java.awt.GridLayout());
 
         btnAdicionar.setBackground(new java.awt.Color(255, 255, 255));
         btnAdicionar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -173,7 +173,7 @@ public class FrmUsuarios extends javax.swing.JInternalFrame {
                 btnAdicionarActionPerformed(evt);
             }
         });
-        painelOpcoes.add(btnAdicionar, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, -1, -1));
+        painelOpcoes.add(btnAdicionar);
 
         btnEditar.setBackground(new java.awt.Color(255, 255, 255));
         btnEditar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -192,7 +192,7 @@ public class FrmUsuarios extends javax.swing.JInternalFrame {
                 btnEditarActionPerformed(evt);
             }
         });
-        painelOpcoes.add(btnEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 20, -1, -1));
+        painelOpcoes.add(btnEditar);
 
         btnDeletar.setBackground(new java.awt.Color(255, 255, 255));
         btnDeletar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -211,7 +211,7 @@ public class FrmUsuarios extends javax.swing.JInternalFrame {
                 btnDeletarActionPerformed(evt);
             }
         });
-        painelOpcoes.add(btnDeletar, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 20, -1, -1));
+        painelOpcoes.add(btnDeletar);
 
         btnLimpar.setBackground(new java.awt.Color(255, 255, 255));
         btnLimpar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -230,7 +230,7 @@ public class FrmUsuarios extends javax.swing.JInternalFrame {
                 btnLimparActionPerformed(evt);
             }
         });
-        painelOpcoes.add(btnLimpar, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 20, -1, -1));
+        painelOpcoes.add(btnLimpar);
 
         painelPrinciapl.add(painelOpcoes, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 180, 490, 130));
 

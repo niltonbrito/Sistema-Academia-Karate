@@ -57,12 +57,13 @@ public class FrmDados extends javax.swing.JInternalFrame {
         lbIdCategoria = new swing.JLabelBordas();
         txtNomeCategoria = new app.bolivia.swing.JCTextField();
         lbCategoria = new swing.JLabelBordas();
-        btnAdinionarCategoria = new javax.swing.JButton();
-        btnEditarCategoria = new javax.swing.JButton();
-        btnApagarCategoria = new javax.swing.JButton();
-        btnLimparCategoria = new javax.swing.JButton();
         jScrollPaneCategoria = new javax.swing.JScrollPane();
         tabelaCategoria = new javax.swing.JTable();
+        painelBotoes1 = new javax.swing.JPanel();
+        btnAdinionarCategoria = new javax.swing.JButton();
+        btnEditarCategoria = new javax.swing.JButton();
+        btnLimparCategoria = new javax.swing.JButton();
+        btnApagarCategoria = new javax.swing.JButton();
         painelParametroCategoria = new javax.swing.JPanel();
         txtIdParametro = new app.bolivia.swing.JCTextField();
         lbIdParametro = new swing.JLabelBordas();
@@ -78,12 +79,13 @@ public class FrmDados extends javax.swing.JInternalFrame {
         lbIdMaxParametro = new swing.JLabelBordas();
         txtSexoParametro = new app.bolivia.swing.JCTextField();
         lbSexoParametro = new swing.JLabelBordas();
-        btnAdicionarParametro = new javax.swing.JButton();
-        btnEditarParametro = new javax.swing.JButton();
-        btnApagarParametro = new javax.swing.JButton();
-        btnLimparParametro = new javax.swing.JButton();
         jScrollPaneParametro = new javax.swing.JScrollPane();
         tabelaParametro = new javax.swing.JTable();
+        jPanel1 = new javax.swing.JPanel();
+        btnLimparParametro = new javax.swing.JButton();
+        btnApagarParametro = new javax.swing.JButton();
+        btnEditarParametro = new javax.swing.JButton();
+        btnAdicionarParametro = new javax.swing.JButton();
         painelFaixa = new javax.swing.JPanel();
         txtIdFaixa = new app.bolivia.swing.JCTextField();
         lbIdFaixa = new swing.JLabelBordas();
@@ -95,12 +97,13 @@ public class FrmDados extends javax.swing.JInternalFrame {
         lbIdFaixa3 = new swing.JLabelBordas();
         txtMaiorIdadeFaixa = new app.bolivia.swing.JCTextField();
         lbIdFaixa4 = new swing.JLabelBordas();
-        btnEditarFaixa = new javax.swing.JButton();
-        btnLimparFaixa = new javax.swing.JButton();
-        btnAdicionarFaixa = new javax.swing.JButton();
-        btnApagarFaixa = new javax.swing.JButton();
         jScrollPaneFaixa = new javax.swing.JScrollPane();
         tabelaFaixa = new javax.swing.JTable();
+        painelBotoes2 = new javax.swing.JPanel();
+        btnLimparFaixa = new javax.swing.JButton();
+        btnApagarFaixa = new javax.swing.JButton();
+        btnEditarFaixa = new javax.swing.JButton();
+        btnAdicionarFaixa = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setClosable(true);
@@ -179,85 +182,6 @@ public class FrmDados extends javax.swing.JInternalFrame {
         lbCategoria.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
         painelCategoria.add(lbCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 20, 390, 50));
 
-        btnAdinionarCategoria.setBackground(new java.awt.Color(255, 255, 255));
-        btnAdinionarCategoria.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        btnAdinionarCategoria.setForeground(new java.awt.Color(35, 102, 145));
-        btnAdinionarCategoria.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/adicionar-1-50px.png"))); // NOI18N
-        btnAdinionarCategoria.setText("ADICIONAR");
-        btnAdinionarCategoria.setBorder(null);
-        btnAdinionarCategoria.setBorderPainted(false);
-        btnAdinionarCategoria.setContentAreaFilled(false);
-        btnAdinionarCategoria.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnAdinionarCategoria.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnAdinionarCategoria.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/adicionar-2-50px.png"))); // NOI18N
-        btnAdinionarCategoria.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnAdinionarCategoria.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAdinionarCategoriaActionPerformed(evt);
-            }
-        });
-        painelCategoria.add(btnAdinionarCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, -1, -1));
-
-        btnEditarCategoria.setBackground(new java.awt.Color(255, 255, 255));
-        btnEditarCategoria.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        btnEditarCategoria.setForeground(new java.awt.Color(35, 102, 145));
-        btnEditarCategoria.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/editar-1-50px.png"))); // NOI18N
-        btnEditarCategoria.setText("EDITAR");
-        btnEditarCategoria.setBorder(null);
-        btnEditarCategoria.setBorderPainted(false);
-        btnEditarCategoria.setContentAreaFilled(false);
-        btnEditarCategoria.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnEditarCategoria.setEnabled(false);
-        btnEditarCategoria.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnEditarCategoria.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/editar-2-50px.png"))); // NOI18N
-        btnEditarCategoria.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnEditarCategoria.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEditarCategoriaActionPerformed(evt);
-            }
-        });
-        painelCategoria.add(btnEditarCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 80, -1, -1));
-
-        btnApagarCategoria.setBackground(new java.awt.Color(255, 255, 255));
-        btnApagarCategoria.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        btnApagarCategoria.setForeground(new java.awt.Color(35, 102, 145));
-        btnApagarCategoria.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/apagar-1-50px.png"))); // NOI18N
-        btnApagarCategoria.setText("APAGAR");
-        btnApagarCategoria.setBorder(null);
-        btnApagarCategoria.setBorderPainted(false);
-        btnApagarCategoria.setContentAreaFilled(false);
-        btnApagarCategoria.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnApagarCategoria.setEnabled(false);
-        btnApagarCategoria.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnApagarCategoria.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/apagar-2-50px.png"))); // NOI18N
-        btnApagarCategoria.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnApagarCategoria.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnApagarCategoriaActionPerformed(evt);
-            }
-        });
-        painelCategoria.add(btnApagarCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 80, -1, -1));
-
-        btnLimparCategoria.setBackground(new java.awt.Color(255, 255, 255));
-        btnLimparCategoria.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        btnLimparCategoria.setForeground(new java.awt.Color(35, 102, 145));
-        btnLimparCategoria.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/limpar-1-50px.png"))); // NOI18N
-        btnLimparCategoria.setText("LIMPAR");
-        btnLimparCategoria.setBorder(null);
-        btnLimparCategoria.setBorderPainted(false);
-        btnLimparCategoria.setContentAreaFilled(false);
-        btnLimparCategoria.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnLimparCategoria.setEnabled(false);
-        btnLimparCategoria.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnLimparCategoria.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/limpar-2-50px.png"))); // NOI18N
-        btnLimparCategoria.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnLimparCategoria.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLimparCategoriaActionPerformed(evt);
-            }
-        });
-        painelCategoria.add(btnLimparCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 80, -1, -1));
-
         jScrollPaneCategoria.setPreferredSize(new java.awt.Dimension(500, 161));
 
         tabelaCategoria = new javax.swing.JTable(){ public boolean isCellEditable(int eowIndex, int colIndex){ return false; } };
@@ -294,6 +218,90 @@ public class FrmDados extends javax.swing.JInternalFrame {
         jScrollPaneCategoria.setViewportView(tabelaCategoria);
 
         painelCategoria.add(jScrollPaneCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 500, 130));
+
+        painelBotoes1.setOpaque(false);
+        painelBotoes1.setLayout(new java.awt.GridLayout());
+
+        btnAdinionarCategoria.setBackground(new java.awt.Color(255, 255, 255));
+        btnAdinionarCategoria.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnAdinionarCategoria.setForeground(new java.awt.Color(35, 102, 145));
+        btnAdinionarCategoria.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/adicionar-1-50px.png"))); // NOI18N
+        btnAdinionarCategoria.setText("ADICIONAR");
+        btnAdinionarCategoria.setBorder(null);
+        btnAdinionarCategoria.setBorderPainted(false);
+        btnAdinionarCategoria.setContentAreaFilled(false);
+        btnAdinionarCategoria.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnAdinionarCategoria.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnAdinionarCategoria.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/adicionar-2-50px.png"))); // NOI18N
+        btnAdinionarCategoria.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnAdinionarCategoria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAdinionarCategoriaActionPerformed(evt);
+            }
+        });
+        painelBotoes1.add(btnAdinionarCategoria);
+
+        btnEditarCategoria.setBackground(new java.awt.Color(255, 255, 255));
+        btnEditarCategoria.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnEditarCategoria.setForeground(new java.awt.Color(35, 102, 145));
+        btnEditarCategoria.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/editar-1-50px.png"))); // NOI18N
+        btnEditarCategoria.setText("EDITAR");
+        btnEditarCategoria.setBorder(null);
+        btnEditarCategoria.setBorderPainted(false);
+        btnEditarCategoria.setContentAreaFilled(false);
+        btnEditarCategoria.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnEditarCategoria.setEnabled(false);
+        btnEditarCategoria.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnEditarCategoria.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/editar-2-50px.png"))); // NOI18N
+        btnEditarCategoria.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnEditarCategoria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEditarCategoriaActionPerformed(evt);
+            }
+        });
+        painelBotoes1.add(btnEditarCategoria);
+
+        btnLimparCategoria.setBackground(new java.awt.Color(255, 255, 255));
+        btnLimparCategoria.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnLimparCategoria.setForeground(new java.awt.Color(35, 102, 145));
+        btnLimparCategoria.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/limpar-1-50px.png"))); // NOI18N
+        btnLimparCategoria.setText("LIMPAR");
+        btnLimparCategoria.setBorder(null);
+        btnLimparCategoria.setBorderPainted(false);
+        btnLimparCategoria.setContentAreaFilled(false);
+        btnLimparCategoria.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnLimparCategoria.setEnabled(false);
+        btnLimparCategoria.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnLimparCategoria.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/limpar-2-50px.png"))); // NOI18N
+        btnLimparCategoria.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnLimparCategoria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimparCategoriaActionPerformed(evt);
+            }
+        });
+        painelBotoes1.add(btnLimparCategoria);
+
+        btnApagarCategoria.setBackground(new java.awt.Color(255, 255, 255));
+        btnApagarCategoria.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnApagarCategoria.setForeground(new java.awt.Color(35, 102, 145));
+        btnApagarCategoria.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/apagar-1-50px.png"))); // NOI18N
+        btnApagarCategoria.setText("APAGAR");
+        btnApagarCategoria.setBorder(null);
+        btnApagarCategoria.setBorderPainted(false);
+        btnApagarCategoria.setContentAreaFilled(false);
+        btnApagarCategoria.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnApagarCategoria.setEnabled(false);
+        btnApagarCategoria.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnApagarCategoria.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/apagar-2-50px.png"))); // NOI18N
+        btnApagarCategoria.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnApagarCategoria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnApagarCategoriaActionPerformed(evt);
+            }
+        });
+        painelBotoes1.add(btnApagarCategoria);
+
+        painelCategoria.add(painelBotoes1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 490, 72));
 
         painelParametroCategoria.setBackground(new java.awt.Color(255, 255, 255));
         painelParametroCategoria.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "CADASTRO PARÂMENTROS CATEGORIA", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12), new java.awt.Color(35, 102, 145))); // NOI18N
@@ -461,85 +469,6 @@ public class FrmDados extends javax.swing.JInternalFrame {
         lbSexoParametro.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
         painelParametroCategoria.add(lbSexoParametro, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 80, 230, 50));
 
-        btnAdicionarParametro.setBackground(new java.awt.Color(255, 255, 255));
-        btnAdicionarParametro.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        btnAdicionarParametro.setForeground(new java.awt.Color(35, 102, 145));
-        btnAdicionarParametro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/adicionar-1-50px.png"))); // NOI18N
-        btnAdicionarParametro.setText("ADICIONAR");
-        btnAdicionarParametro.setBorder(null);
-        btnAdicionarParametro.setBorderPainted(false);
-        btnAdicionarParametro.setContentAreaFilled(false);
-        btnAdicionarParametro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnAdicionarParametro.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnAdicionarParametro.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/adicionar-2-50px.png"))); // NOI18N
-        btnAdicionarParametro.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnAdicionarParametro.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAdicionarParametroActionPerformed(evt);
-            }
-        });
-        painelParametroCategoria.add(btnAdicionarParametro, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, -1, -1));
-
-        btnEditarParametro.setBackground(new java.awt.Color(255, 255, 255));
-        btnEditarParametro.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        btnEditarParametro.setForeground(new java.awt.Color(35, 102, 145));
-        btnEditarParametro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/editar-1-50px.png"))); // NOI18N
-        btnEditarParametro.setText("EDITAR");
-        btnEditarParametro.setBorder(null);
-        btnEditarParametro.setBorderPainted(false);
-        btnEditarParametro.setContentAreaFilled(false);
-        btnEditarParametro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnEditarParametro.setEnabled(false);
-        btnEditarParametro.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnEditarParametro.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/editar-2-50px.png"))); // NOI18N
-        btnEditarParametro.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnEditarParametro.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEditarParametroActionPerformed(evt);
-            }
-        });
-        painelParametroCategoria.add(btnEditarParametro, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 80, -1, -1));
-
-        btnApagarParametro.setBackground(new java.awt.Color(255, 255, 255));
-        btnApagarParametro.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        btnApagarParametro.setForeground(new java.awt.Color(35, 102, 145));
-        btnApagarParametro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/apagar-1-50px.png"))); // NOI18N
-        btnApagarParametro.setText("APAGAR");
-        btnApagarParametro.setBorder(null);
-        btnApagarParametro.setBorderPainted(false);
-        btnApagarParametro.setContentAreaFilled(false);
-        btnApagarParametro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnApagarParametro.setEnabled(false);
-        btnApagarParametro.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnApagarParametro.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/apagar-2-50px.png"))); // NOI18N
-        btnApagarParametro.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnApagarParametro.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnApagarParametroActionPerformed(evt);
-            }
-        });
-        painelParametroCategoria.add(btnApagarParametro, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 80, -1, -1));
-
-        btnLimparParametro.setBackground(new java.awt.Color(255, 255, 255));
-        btnLimparParametro.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        btnLimparParametro.setForeground(new java.awt.Color(35, 102, 145));
-        btnLimparParametro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/limpar-1-50px.png"))); // NOI18N
-        btnLimparParametro.setText("LIMPAR");
-        btnLimparParametro.setBorder(null);
-        btnLimparParametro.setBorderPainted(false);
-        btnLimparParametro.setContentAreaFilled(false);
-        btnLimparParametro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnLimparParametro.setEnabled(false);
-        btnLimparParametro.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnLimparParametro.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/limpar-2-50px.png"))); // NOI18N
-        btnLimparParametro.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnLimparParametro.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLimparParametroActionPerformed(evt);
-            }
-        });
-        painelParametroCategoria.add(btnLimparParametro, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 80, -1, -1));
-
         tabelaParametro = new javax.swing.JTable(){ public boolean isCellEditable(int eowIndex, int colIndex){ return false; } };
         tabelaParametro.setBackground(new java.awt.Color(255, 255, 255));
         tabelaParametro.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -573,6 +502,90 @@ public class FrmDados extends javax.swing.JInternalFrame {
         jScrollPaneParametro.setViewportView(tabelaParametro);
 
         painelParametroCategoria.add(jScrollPaneParametro, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 770, 164));
+
+        jPanel1.setOpaque(false);
+        jPanel1.setLayout(new java.awt.GridLayout());
+
+        btnLimparParametro.setBackground(new java.awt.Color(255, 255, 255));
+        btnLimparParametro.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnLimparParametro.setForeground(new java.awt.Color(35, 102, 145));
+        btnLimparParametro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/limpar-1-50px.png"))); // NOI18N
+        btnLimparParametro.setText("LIMPAR");
+        btnLimparParametro.setBorder(null);
+        btnLimparParametro.setBorderPainted(false);
+        btnLimparParametro.setContentAreaFilled(false);
+        btnLimparParametro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnLimparParametro.setEnabled(false);
+        btnLimparParametro.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnLimparParametro.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/limpar-2-50px.png"))); // NOI18N
+        btnLimparParametro.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnLimparParametro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimparParametroActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnLimparParametro);
+
+        btnApagarParametro.setBackground(new java.awt.Color(255, 255, 255));
+        btnApagarParametro.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnApagarParametro.setForeground(new java.awt.Color(35, 102, 145));
+        btnApagarParametro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/apagar-1-50px.png"))); // NOI18N
+        btnApagarParametro.setText("APAGAR");
+        btnApagarParametro.setBorder(null);
+        btnApagarParametro.setBorderPainted(false);
+        btnApagarParametro.setContentAreaFilled(false);
+        btnApagarParametro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnApagarParametro.setEnabled(false);
+        btnApagarParametro.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnApagarParametro.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/apagar-2-50px.png"))); // NOI18N
+        btnApagarParametro.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnApagarParametro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnApagarParametroActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnApagarParametro);
+
+        btnEditarParametro.setBackground(new java.awt.Color(255, 255, 255));
+        btnEditarParametro.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnEditarParametro.setForeground(new java.awt.Color(35, 102, 145));
+        btnEditarParametro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/editar-1-50px.png"))); // NOI18N
+        btnEditarParametro.setText("EDITAR");
+        btnEditarParametro.setBorder(null);
+        btnEditarParametro.setBorderPainted(false);
+        btnEditarParametro.setContentAreaFilled(false);
+        btnEditarParametro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnEditarParametro.setEnabled(false);
+        btnEditarParametro.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnEditarParametro.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/editar-2-50px.png"))); // NOI18N
+        btnEditarParametro.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnEditarParametro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEditarParametroActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnEditarParametro);
+
+        btnAdicionarParametro.setBackground(new java.awt.Color(255, 255, 255));
+        btnAdicionarParametro.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnAdicionarParametro.setForeground(new java.awt.Color(35, 102, 145));
+        btnAdicionarParametro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/adicionar-1-50px.png"))); // NOI18N
+        btnAdicionarParametro.setText("ADICIONAR");
+        btnAdicionarParametro.setBorder(null);
+        btnAdicionarParametro.setBorderPainted(false);
+        btnAdicionarParametro.setContentAreaFilled(false);
+        btnAdicionarParametro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnAdicionarParametro.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnAdicionarParametro.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/adicionar-2-50px.png"))); // NOI18N
+        btnAdicionarParametro.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnAdicionarParametro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAdicionarParametroActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnAdicionarParametro);
+
+        painelParametroCategoria.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 440, 80));
 
         painelFaixa.setBackground(new java.awt.Color(255, 255, 255));
         painelFaixa.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "CADASTRO DE FAIXA", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12), new java.awt.Color(35, 102, 145))); // NOI18N
@@ -693,85 +706,6 @@ public class FrmDados extends javax.swing.JInternalFrame {
         lbIdFaixa4.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
         painelFaixa.add(lbIdFaixa4, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 20, 90, 50));
 
-        btnEditarFaixa.setBackground(new java.awt.Color(255, 255, 255));
-        btnEditarFaixa.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        btnEditarFaixa.setForeground(new java.awt.Color(35, 102, 145));
-        btnEditarFaixa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/editar-1-50px.png"))); // NOI18N
-        btnEditarFaixa.setText("EDITAR");
-        btnEditarFaixa.setBorder(null);
-        btnEditarFaixa.setBorderPainted(false);
-        btnEditarFaixa.setContentAreaFilled(false);
-        btnEditarFaixa.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnEditarFaixa.setEnabled(false);
-        btnEditarFaixa.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnEditarFaixa.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/editar-2-50px.png"))); // NOI18N
-        btnEditarFaixa.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnEditarFaixa.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEditarFaixaActionPerformed(evt);
-            }
-        });
-        painelFaixa.add(btnEditarFaixa, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 80, -1, -1));
-
-        btnLimparFaixa.setBackground(new java.awt.Color(255, 255, 255));
-        btnLimparFaixa.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        btnLimparFaixa.setForeground(new java.awt.Color(35, 102, 145));
-        btnLimparFaixa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/limpar-1-50px.png"))); // NOI18N
-        btnLimparFaixa.setText("LIMPAR");
-        btnLimparFaixa.setBorder(null);
-        btnLimparFaixa.setBorderPainted(false);
-        btnLimparFaixa.setContentAreaFilled(false);
-        btnLimparFaixa.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnLimparFaixa.setEnabled(false);
-        btnLimparFaixa.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnLimparFaixa.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/limpar-2-50px.png"))); // NOI18N
-        btnLimparFaixa.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnLimparFaixa.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLimparFaixaActionPerformed(evt);
-            }
-        });
-        painelFaixa.add(btnLimparFaixa, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 80, -1, -1));
-
-        btnAdicionarFaixa.setBackground(new java.awt.Color(255, 255, 255));
-        btnAdicionarFaixa.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        btnAdicionarFaixa.setForeground(new java.awt.Color(35, 102, 145));
-        btnAdicionarFaixa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/adicionar-1-50px.png"))); // NOI18N
-        btnAdicionarFaixa.setText("ADICIONAR");
-        btnAdicionarFaixa.setBorder(null);
-        btnAdicionarFaixa.setBorderPainted(false);
-        btnAdicionarFaixa.setContentAreaFilled(false);
-        btnAdicionarFaixa.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnAdicionarFaixa.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnAdicionarFaixa.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/adicionar-2-50px.png"))); // NOI18N
-        btnAdicionarFaixa.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnAdicionarFaixa.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAdicionarFaixaActionPerformed(evt);
-            }
-        });
-        painelFaixa.add(btnAdicionarFaixa, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, -1, -1));
-
-        btnApagarFaixa.setBackground(new java.awt.Color(255, 255, 255));
-        btnApagarFaixa.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        btnApagarFaixa.setForeground(new java.awt.Color(35, 102, 145));
-        btnApagarFaixa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/apagar-1-50px.png"))); // NOI18N
-        btnApagarFaixa.setText("APAGAR");
-        btnApagarFaixa.setBorder(null);
-        btnApagarFaixa.setBorderPainted(false);
-        btnApagarFaixa.setContentAreaFilled(false);
-        btnApagarFaixa.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnApagarFaixa.setEnabled(false);
-        btnApagarFaixa.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnApagarFaixa.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/apagar-2-50px.png"))); // NOI18N
-        btnApagarFaixa.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnApagarFaixa.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnApagarFaixaActionPerformed(evt);
-            }
-        });
-        painelFaixa.add(btnApagarFaixa, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 80, -1, -1));
-
         tabelaFaixa = new javax.swing.JTable(){ public boolean isCellEditable(int eowIndex, int colIndex){ return false; } };
         tabelaFaixa.setBackground(new java.awt.Color(255, 255, 255));
         tabelaFaixa.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -806,6 +740,90 @@ public class FrmDados extends javax.swing.JInternalFrame {
 
         painelFaixa.add(jScrollPaneFaixa, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 500, 130));
 
+        painelBotoes2.setOpaque(false);
+        painelBotoes2.setLayout(new java.awt.GridLayout());
+
+        btnLimparFaixa.setBackground(new java.awt.Color(255, 255, 255));
+        btnLimparFaixa.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnLimparFaixa.setForeground(new java.awt.Color(35, 102, 145));
+        btnLimparFaixa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/limpar-1-50px.png"))); // NOI18N
+        btnLimparFaixa.setText("LIMPAR");
+        btnLimparFaixa.setBorder(null);
+        btnLimparFaixa.setBorderPainted(false);
+        btnLimparFaixa.setContentAreaFilled(false);
+        btnLimparFaixa.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnLimparFaixa.setEnabled(false);
+        btnLimparFaixa.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnLimparFaixa.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/limpar-2-50px.png"))); // NOI18N
+        btnLimparFaixa.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnLimparFaixa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimparFaixaActionPerformed(evt);
+            }
+        });
+        painelBotoes2.add(btnLimparFaixa);
+
+        btnApagarFaixa.setBackground(new java.awt.Color(255, 255, 255));
+        btnApagarFaixa.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnApagarFaixa.setForeground(new java.awt.Color(35, 102, 145));
+        btnApagarFaixa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/apagar-1-50px.png"))); // NOI18N
+        btnApagarFaixa.setText("APAGAR");
+        btnApagarFaixa.setBorder(null);
+        btnApagarFaixa.setBorderPainted(false);
+        btnApagarFaixa.setContentAreaFilled(false);
+        btnApagarFaixa.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnApagarFaixa.setEnabled(false);
+        btnApagarFaixa.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnApagarFaixa.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/apagar-2-50px.png"))); // NOI18N
+        btnApagarFaixa.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnApagarFaixa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnApagarFaixaActionPerformed(evt);
+            }
+        });
+        painelBotoes2.add(btnApagarFaixa);
+
+        btnEditarFaixa.setBackground(new java.awt.Color(255, 255, 255));
+        btnEditarFaixa.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnEditarFaixa.setForeground(new java.awt.Color(35, 102, 145));
+        btnEditarFaixa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/editar-1-50px.png"))); // NOI18N
+        btnEditarFaixa.setText("EDITAR");
+        btnEditarFaixa.setBorder(null);
+        btnEditarFaixa.setBorderPainted(false);
+        btnEditarFaixa.setContentAreaFilled(false);
+        btnEditarFaixa.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnEditarFaixa.setEnabled(false);
+        btnEditarFaixa.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnEditarFaixa.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/editar-2-50px.png"))); // NOI18N
+        btnEditarFaixa.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnEditarFaixa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEditarFaixaActionPerformed(evt);
+            }
+        });
+        painelBotoes2.add(btnEditarFaixa);
+
+        btnAdicionarFaixa.setBackground(new java.awt.Color(255, 255, 255));
+        btnAdicionarFaixa.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnAdicionarFaixa.setForeground(new java.awt.Color(35, 102, 145));
+        btnAdicionarFaixa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/adicionar-1-50px.png"))); // NOI18N
+        btnAdicionarFaixa.setText("ADICIONAR");
+        btnAdicionarFaixa.setBorder(null);
+        btnAdicionarFaixa.setBorderPainted(false);
+        btnAdicionarFaixa.setContentAreaFilled(false);
+        btnAdicionarFaixa.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnAdicionarFaixa.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnAdicionarFaixa.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/adicionar-2-50px.png"))); // NOI18N
+        btnAdicionarFaixa.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnAdicionarFaixa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAdicionarFaixaActionPerformed(evt);
+            }
+        });
+        painelBotoes2.add(btnAdicionarFaixa);
+
+        painelFaixa.add(painelBotoes2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 72, 500, 80));
+
         javax.swing.GroupLayout painelPrincipalLayout = new javax.swing.GroupLayout(painelPrincipal);
         painelPrincipal.setLayout(painelPrincipalLayout);
         painelPrincipalLayout.setHorizontalGroup(
@@ -824,11 +842,13 @@ public class FrmDados extends javax.swing.JInternalFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelPrincipalLayout.createSequentialGroup()
                 .addGap(10, 10, 10)
                 .addGroup(painelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(painelParametroCategoria, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, painelPrincipalLayout.createSequentialGroup()
+                        .addComponent(painelParametroCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, painelPrincipalLayout.createSequentialGroup()
                         .addComponent(painelCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, 0)
-                        .addComponent(painelFaixa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(painelFaixa, javax.swing.GroupLayout.DEFAULT_SIZE, 281, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
@@ -997,6 +1017,7 @@ public class FrmDados extends javax.swing.JInternalFrame {
     public static javax.swing.JButton btnLimparCategoria;
     public static javax.swing.JButton btnLimparFaixa;
     public static javax.swing.JButton btnLimparParametro;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPaneCategoria;
     private javax.swing.JScrollPane jScrollPaneFaixa;
     private javax.swing.JScrollPane jScrollPaneParametro;
@@ -1014,6 +1035,8 @@ public class FrmDados extends javax.swing.JInternalFrame {
     private swing.JLabelBordas lbIdadeMinParametro;
     private swing.JLabelBordas lbNomeParametro;
     private swing.JLabelBordas lbSexoParametro;
+    private javax.swing.JPanel painelBotoes1;
+    private javax.swing.JPanel painelBotoes2;
     private javax.swing.JPanel painelCategoria;
     private javax.swing.JPanel painelFaixa;
     private javax.swing.JPanel painelParametroCategoria;

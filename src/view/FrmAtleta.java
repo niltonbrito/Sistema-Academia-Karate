@@ -46,7 +46,6 @@ public class FrmAtleta extends javax.swing.JInternalFrame {
         txtIdCbksc.setVisible(false);
         lbId.setVisible(false);
         txtId.setVisible(false);
-
     }
 
     /**
@@ -464,7 +463,7 @@ public class FrmAtleta extends javax.swing.JInternalFrame {
         painelOpcoes.setBackground(new java.awt.Color(255, 255, 255));
         painelOpcoes.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "OPÇÕES", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12), new java.awt.Color(34, 102, 145))); // NOI18N
         painelOpcoes.setPreferredSize(new java.awt.Dimension(163, 180));
-        painelOpcoes.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        painelOpcoes.setLayout(new java.awt.GridLayout());
 
         btnAdicionar.setBackground(new java.awt.Color(255, 255, 255));
         btnAdicionar.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -483,7 +482,7 @@ public class FrmAtleta extends javax.swing.JInternalFrame {
                 btnAdicionarActionPerformed(evt);
             }
         });
-        painelOpcoes.add(btnAdicionar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
+        painelOpcoes.add(btnAdicionar);
 
         btnEditar.setBackground(new java.awt.Color(255, 255, 255));
         btnEditar.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -503,7 +502,7 @@ public class FrmAtleta extends javax.swing.JInternalFrame {
                 btnEditarActionPerformed(evt);
             }
         });
-        painelOpcoes.add(btnEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, -1, -1));
+        painelOpcoes.add(btnEditar);
 
         btnDeletar.setBackground(new java.awt.Color(255, 255, 255));
         btnDeletar.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -523,13 +522,8 @@ public class FrmAtleta extends javax.swing.JInternalFrame {
                 btnDeletarActionPerformed(evt);
             }
         });
-        painelOpcoes.add(btnDeletar, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 20, -1, -1));
+        painelOpcoes.add(btnDeletar);
 
-        tabelaAtleta = new javax.swing.JTable(){
-            public boolean isCellEditable(int eowIndex, int colIndex){
-                return false;
-            }
-        };
         btnLimpar.setBackground(new java.awt.Color(255, 255, 255));
         btnLimpar.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         btnLimpar.setForeground(new java.awt.Color(34, 102, 145));
@@ -548,7 +542,7 @@ public class FrmAtleta extends javax.swing.JInternalFrame {
                 btnLimparActionPerformed(evt);
             }
         });
-        painelOpcoes.add(btnLimpar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 20, -1, -1));
+        painelOpcoes.add(btnLimpar);
 
         btnDeletarTudo.setBackground(new java.awt.Color(255, 255, 255));
         btnDeletarTudo.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -568,7 +562,7 @@ public class FrmAtleta extends javax.swing.JInternalFrame {
                 btnDeletarTudoActionPerformed(evt);
             }
         });
-        painelOpcoes.add(btnDeletarTudo, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 20, -1, -1));
+        painelOpcoes.add(btnDeletarTudo);
 
         painelPrincipal.add(painelOpcoes, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 90, 330, 110));
 
@@ -722,6 +716,7 @@ public class FrmAtleta extends javax.swing.JInternalFrame {
 
     private void formInternalFrameActivated(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_formInternalFrameActivated
         // Chamando o metodo para popular ComboBox e gerar ID
+        atletaBS.habilitarBotoes();
         atletaBS.gerarId();
         swingFrm.setComboBoxFrmAtleta();
         swingFrm.setCmbFaixaAtleta();

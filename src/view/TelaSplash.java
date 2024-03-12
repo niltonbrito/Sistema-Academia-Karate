@@ -65,7 +65,7 @@ public class TelaSplash extends javax.swing.JFrame {
         lbSplash = new swing.JLabelBordas();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Bandampla System");
+        setTitle("AKR System");
         setIconImage(Toolkit.getDefaultToolkit().getImage(TelaSplash.class.getResource("/imagens/principal/icon-50px.png")));
         setUndecorated(true);
         setResizable(false);

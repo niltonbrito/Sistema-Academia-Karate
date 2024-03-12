@@ -20,6 +20,9 @@ public class LogarBS {
     LogarMD logarMD = new LogarMD();
     LogarDao logarDao = new LogarDao();
     public static int validar;
+    String status;
+    String user;
+    String perfil;
 
     // Método responsável pela autenticação e gestão de perfil do usuário
     public void logarBS() {
@@ -35,23 +38,21 @@ public class LogarBS {
                 // Se existir se a senha e usuario e correspondente
                 if (logarDao.resultSet.next()) {
                     // A linha abaixo obtem o conteudo do campo perfil da tabela tbusuarios
-                    String status = logarDao.resultSet.getString(10);
-                    String user = logarDao.resultSet.getString(3);
+                    status = logarDao.resultSet.getString(10);
+                    user = logarDao.resultSet.getString(3);
                     if (status.equalsIgnoreCase("ATIVO")) {
                         JOptionPane.showMessageDialog(null, "Bem vindo ao Sistema, " + user, "Boas Vindas", JOptionPane.INFORMATION_MESSAGE, new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/icon-confim.png")));
-                        validar = 1;
                         // A linha abaixo obtem o conteudo do campo perfil da tabela tbusuarios
-                        String perfil = logarDao.resultSet.getString(9);
+                        perfil = logarDao.resultSet.getString(9);
+                        validar = 1;
                         // A linha abaixo exibe o painel principal
                         TelaPrincipal principal = new TelaPrincipal();
                         principal.setVisible(true);
                         // A estrutura abaixo faz o tratamento do perfil do usuario
                         if (perfil.equalsIgnoreCase("administrador")) {
-                            btnDeletarTudo.setEnabled(true);
                             lbUsConecatado.setText(user);
-                            lbUsConecatado.setForeground(Color.ORANGE);
+                            lbUsConecatado.setForeground(new Color(25, 108, 144));
                         } else if (perfil.equalsIgnoreCase("gerente")) {
-                            btnDeletarTudo.setVisible(false);
                             btnCadastroUsuarios.setVisible(true);
                             btnCadastroAtleta.setVisible(true);
                             btnCadastroExames.setVisible(true);
@@ -59,7 +60,6 @@ public class LogarBS {
                             lbUsConecatado.setText(user);
                             lbUsConecatado.setForeground(Color.BLUE);
                         } else if (perfil.equalsIgnoreCase("professor")) {
-                            btnDeletarTudo.setVisible(false);
                             btnCadastroUsuarios.setVisible(false);
                             btnCadastroAtleta.setVisible(true);
                             btnCadastroExames.setVisible(false);
@@ -67,7 +67,6 @@ public class LogarBS {
                             lbUsConecatado.setText(user);
                             lbUsConecatado.setForeground(Color.GREEN);
                         } else {
-                            btnDeletarTudo.setVisible(false);
                             btnCadastroUsuarios.setVisible(false);
                             btnCadastroAtleta.setVisible(false);
                             btnCadastroExames.setVisible(false);
@@ -81,9 +80,10 @@ public class LogarBS {
                 } else {
                     //System.out.println("conteudo2 "+resultset.next());
                     JOptionPane.showMessageDialog(null, "Usuário e/ou senha inválido(s)", "Aviso", JOptionPane.ERROR_MESSAGE, new ImageIcon(getClass().getResource("/imagens/principal/icon-error.png")));
+                    txtSenha.requestFocus();
                 }
             } catch (Exception e) {
-
+                JOptionPane.showMessageDialog(null, "Erro " + e,"Erro", JOptionPane.ERROR_MESSAGE, new ImageIcon(getClass().getResource("/imagens/principal/icon-error.png")));
             }
         }
 

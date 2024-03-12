@@ -51,19 +51,20 @@ public class TelaPrincipal extends javax.swing.JFrame {
         painelPrincipal = new swing.PainelBordas();
         painelBordas = new swing.PainelBordas();
         lbUsConecatado = new javax.swing.JLabel();
-        btnCadastroUsuarios = new javax.swing.JButton();
         btnDesconectar = new javax.swing.JButton();
+        painelDataHora = new javax.swing.JPanel();
+        lbData = new javax.swing.JLabel();
+        lbHora = new javax.swing.JLabel();
+        painelBotoes = new javax.swing.JPanel();
+        btnCadastroUsuarios = new javax.swing.JButton();
         btnCadastroAtleta = new javax.swing.JButton();
         btnConsulta = new javax.swing.JButton();
         btnCadastroExames = new javax.swing.JButton();
         btnCadastroDados = new javax.swing.JButton();
-        painelDataHora = new javax.swing.JPanel();
-        lbData = new javax.swing.JLabel();
-        lbHora = new javax.swing.JLabel();
         painelDesktop = new swing.PainelDesktop();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Bandampla System");
+        setTitle("AKR System");
         setIconImage(Toolkit.getDefaultToolkit().getImage(TelaPrincipal.class.getResource("/imagens/principal/icon-50px.png")));
         setUndecorated(true);
         setResizable(false);
@@ -82,26 +83,9 @@ public class TelaPrincipal extends javax.swing.JFrame {
         lbUsConecatado.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         lbUsConecatado.setForeground(new java.awt.Color(255, 255, 255));
         lbUsConecatado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/conectado.png"))); // NOI18N
+        lbUsConecatado.setText("USUÁRIO");
         lbUsConecatado.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 10, 0, 0));
         painelBordas.add(lbUsConecatado, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 210, 30));
-
-        btnCadastroUsuarios.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        btnCadastroUsuarios.setForeground(new java.awt.Color(255, 255, 255));
-        btnCadastroUsuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/usuario-1-64px.png"))); // NOI18N
-        btnCadastroUsuarios.setMnemonic('u');
-        btnCadastroUsuarios.setText("CADASTRO USUÁRIOS");
-        btnCadastroUsuarios.setBorder(null);
-        btnCadastroUsuarios.setContentAreaFilled(false);
-        btnCadastroUsuarios.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnCadastroUsuarios.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnCadastroUsuarios.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/usuario-2-64px.png"))); // NOI18N
-        btnCadastroUsuarios.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnCadastroUsuarios.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCadastroUsuariosActionPerformed(evt);
-            }
-        });
-        painelBordas.add(btnCadastroUsuarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 0, 140, 90));
 
         btnDesconectar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         btnDesconectar.setForeground(new java.awt.Color(204, 0, 0));
@@ -116,78 +100,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
         painelBordas.add(btnDesconectar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, -1, -1));
-
-        btnCadastroAtleta.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        btnCadastroAtleta.setForeground(new java.awt.Color(255, 255, 255));
-        btnCadastroAtleta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/usuario-1-64px.png"))); // NOI18N
-        btnCadastroAtleta.setMnemonic('c');
-        btnCadastroAtleta.setText("CADASTRO ATLETA");
-        btnCadastroAtleta.setBorder(null);
-        btnCadastroAtleta.setContentAreaFilled(false);
-        btnCadastroAtleta.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnCadastroAtleta.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnCadastroAtleta.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/usuario-2-64px.png"))); // NOI18N
-        btnCadastroAtleta.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnCadastroAtleta.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCadastroAtletaActionPerformed(evt);
-            }
-        });
-        painelBordas.add(btnCadastroAtleta, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 0, -1, 90));
-
-        btnConsulta.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        btnConsulta.setForeground(new java.awt.Color(255, 255, 255));
-        btnConsulta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/pesquisar-1-64px.png"))); // NOI18N
-        btnConsulta.setMnemonic('s');
-        btnConsulta.setText("CONSULTA");
-        btnConsulta.setBorder(null);
-        btnConsulta.setContentAreaFilled(false);
-        btnConsulta.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnConsulta.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnConsulta.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/pesquisar-2-64px.png"))); // NOI18N
-        btnConsulta.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnConsulta.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnConsultaActionPerformed(evt);
-            }
-        });
-        painelBordas.add(btnConsulta, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 0, -1, 90));
-
-        btnCadastroExames.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        btnCadastroExames.setForeground(new java.awt.Color(255, 255, 255));
-        btnCadastroExames.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/certificado-1-64px.png"))); // NOI18N
-        btnCadastroExames.setMnemonic('e');
-        btnCadastroExames.setText("EXAMES");
-        btnCadastroExames.setBorder(null);
-        btnCadastroExames.setContentAreaFilled(false);
-        btnCadastroExames.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnCadastroExames.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnCadastroExames.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/certificado-2-64px.png"))); // NOI18N
-        btnCadastroExames.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnCadastroExames.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCadastroExamesActionPerformed(evt);
-            }
-        });
-        painelBordas.add(btnCadastroExames, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 0, -1, 90));
-
-        btnCadastroDados.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        btnCadastroDados.setForeground(new java.awt.Color(255, 255, 255));
-        btnCadastroDados.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/dados-1-64px.png"))); // NOI18N
-        btnCadastroDados.setMnemonic('d');
-        btnCadastroDados.setText("CADASTRO DE DADOS");
-        btnCadastroDados.setBorder(null);
-        btnCadastroDados.setContentAreaFilled(false);
-        btnCadastroDados.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnCadastroDados.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnCadastroDados.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/dados-2-64px.png"))); // NOI18N
-        btnCadastroDados.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnCadastroDados.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCadastroDadosActionPerformed(evt);
-            }
-        });
-        painelBordas.add(btnCadastroDados, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 0, -1, 90));
 
         painelDataHora.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 1, true));
         painelDataHora.setOpaque(false);
@@ -226,6 +138,101 @@ public class TelaPrincipal extends javax.swing.JFrame {
         );
 
         painelBordas.add(painelDataHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 10, 190, -1));
+
+        painelBotoes.setOpaque(false);
+        painelBotoes.setLayout(new java.awt.GridLayout());
+
+        btnCadastroUsuarios.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnCadastroUsuarios.setForeground(new java.awt.Color(255, 255, 255));
+        btnCadastroUsuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/usuario-1-64px.png"))); // NOI18N
+        btnCadastroUsuarios.setMnemonic('u');
+        btnCadastroUsuarios.setText("CADASTRO USUÁRIOS");
+        btnCadastroUsuarios.setBorder(null);
+        btnCadastroUsuarios.setContentAreaFilled(false);
+        btnCadastroUsuarios.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCadastroUsuarios.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnCadastroUsuarios.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/usuario-2-64px.png"))); // NOI18N
+        btnCadastroUsuarios.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnCadastroUsuarios.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCadastroUsuariosActionPerformed(evt);
+            }
+        });
+        painelBotoes.add(btnCadastroUsuarios);
+
+        btnCadastroAtleta.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnCadastroAtleta.setForeground(new java.awt.Color(255, 255, 255));
+        btnCadastroAtleta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/usuario-1-64px.png"))); // NOI18N
+        btnCadastroAtleta.setMnemonic('c');
+        btnCadastroAtleta.setText("CADASTRO ATLETA");
+        btnCadastroAtleta.setBorder(null);
+        btnCadastroAtleta.setContentAreaFilled(false);
+        btnCadastroAtleta.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCadastroAtleta.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnCadastroAtleta.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/usuario-2-64px.png"))); // NOI18N
+        btnCadastroAtleta.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnCadastroAtleta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCadastroAtletaActionPerformed(evt);
+            }
+        });
+        painelBotoes.add(btnCadastroAtleta);
+
+        btnConsulta.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnConsulta.setForeground(new java.awt.Color(255, 255, 255));
+        btnConsulta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/pesquisar-1-64px.png"))); // NOI18N
+        btnConsulta.setMnemonic('s');
+        btnConsulta.setText("CONSULTA");
+        btnConsulta.setBorder(null);
+        btnConsulta.setContentAreaFilled(false);
+        btnConsulta.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnConsulta.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnConsulta.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/pesquisar-2-64px.png"))); // NOI18N
+        btnConsulta.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnConsulta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnConsultaActionPerformed(evt);
+            }
+        });
+        painelBotoes.add(btnConsulta);
+
+        btnCadastroExames.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnCadastroExames.setForeground(new java.awt.Color(255, 255, 255));
+        btnCadastroExames.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/certificado-1-64px.png"))); // NOI18N
+        btnCadastroExames.setMnemonic('e');
+        btnCadastroExames.setText("EXAMES");
+        btnCadastroExames.setBorder(null);
+        btnCadastroExames.setContentAreaFilled(false);
+        btnCadastroExames.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCadastroExames.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnCadastroExames.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/certificado-2-64px.png"))); // NOI18N
+        btnCadastroExames.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnCadastroExames.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCadastroExamesActionPerformed(evt);
+            }
+        });
+        painelBotoes.add(btnCadastroExames);
+
+        btnCadastroDados.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnCadastroDados.setForeground(new java.awt.Color(255, 255, 255));
+        btnCadastroDados.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/dados-1-64px.png"))); // NOI18N
+        btnCadastroDados.setMnemonic('d');
+        btnCadastroDados.setText("CADASTRO DE DADOS");
+        btnCadastroDados.setBorder(null);
+        btnCadastroDados.setContentAreaFilled(false);
+        btnCadastroDados.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCadastroDados.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnCadastroDados.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/dados-2-64px.png"))); // NOI18N
+        btnCadastroDados.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnCadastroDados.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCadastroDadosActionPerformed(evt);
+            }
+        });
+        painelBotoes.add(btnCadastroDados);
+
+        painelBordas.add(painelBotoes, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 0, 890, 90));
 
         painelDesktop.setBackground(new Color(0,0,0,0));
         painelDesktop.setOpaque(false);
@@ -350,6 +357,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel lbHora;
     public static javax.swing.JLabel lbUsConecatado;
     private swing.PainelBordas painelBordas;
+    private javax.swing.JPanel painelBotoes;
     private javax.swing.JPanel painelDataHora;
     private swing.PainelDesktop painelDesktop;
     private swing.PainelBordas painelPrincipal;
