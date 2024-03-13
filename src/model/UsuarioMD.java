@@ -45,5 +45,4 @@ public class UsuarioMD extends PessoaMD {
     public void setStatus(String status) {
         this.status = status;
     }
-
 }

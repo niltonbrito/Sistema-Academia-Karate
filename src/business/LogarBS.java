@@ -6,7 +6,6 @@ import java.awt.Toolkit;
 import java.awt.event.KeyEvent;
 import javax.swing.*;
 import model.LogarMD;
-import static view.FrmAtleta.*;
 import static view.TelaLogin.*;
 import view.TelaPrincipal;
 import static view.TelaPrincipal.*;
@@ -38,12 +37,12 @@ public class LogarBS {
                 // Se existir se a senha e usuario e correspondente
                 if (logarDao.resultSet.next()) {
                     // A linha abaixo obtem o conteudo do campo perfil da tabela tbusuarios
-                    status = logarDao.resultSet.getString(10);
-                    user = logarDao.resultSet.getString(3);
+                    status = logarDao.resultSet.getString(9);
+                    user = logarDao.resultSet.getString(2);
                     if (status.equalsIgnoreCase("ATIVO")) {
                         JOptionPane.showMessageDialog(null, "Bem vindo ao Sistema, " + user, "Boas Vindas", JOptionPane.INFORMATION_MESSAGE, new javax.swing.ImageIcon(getClass().getResource("/imagens/principal/icon-confim.png")));
                         // A linha abaixo obtem o conteudo do campo perfil da tabela tbusuarios
-                        perfil = logarDao.resultSet.getString(9);
+                        perfil = logarDao.resultSet.getString(8);
                         validar = 1;
                         // A linha abaixo exibe o painel principal
                         TelaPrincipal principal = new TelaPrincipal();

@@ -29,10 +29,6 @@ public class FrmUsuarios extends javax.swing.JInternalFrame {
      */
     public FrmUsuarios() {
         initComponents();
-        RestrictedTextField validarMatricula;
-        validarMatricula = new RestrictedTextField(txtMatricula);
-        //validarMatricula.setOnlyNums(true);
-        validarMatricula.setLimit(6);
         RestrictedTextField validarUsuario;
         validarUsuario = new RestrictedTextField(txtNome);
         validarUsuario.setLimit(50);
@@ -71,8 +67,6 @@ public class FrmUsuarios extends javax.swing.JInternalFrame {
         jScrollPane = new javax.swing.JScrollPane();
         tabelaUsuario = new javax.swing.JTable();
         painelRegistro = new swing.PainelBordas();
-        txtMatricula = new app.bolivia.swing.JCTextField();
-        lbMatricula = new swing.JLabelBordas();
         txtNome = new app.bolivia.swing.JCTextField();
         lbNome = new swing.JLabelBordas();
         txtCpf = new javax.swing.JFormattedTextField();
@@ -155,7 +149,7 @@ public class FrmUsuarios extends javax.swing.JInternalFrame {
         painelOpcoes.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "OPÇÕES", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12), new java.awt.Color(35, 102, 145))); // NOI18N
         painelOpcoes.setForeground(new java.awt.Color(35, 102, 145));
         painelOpcoes.setPreferredSize(new java.awt.Dimension(800, 130));
-        painelOpcoes.setLayout(new java.awt.GridLayout());
+        painelOpcoes.setLayout(new java.awt.GridLayout(1, 0));
 
         btnAdicionar.setBackground(new java.awt.Color(255, 255, 255));
         btnAdicionar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -284,29 +278,6 @@ public class FrmUsuarios extends javax.swing.JInternalFrame {
         painelRegistro.setRequestFocusEnabled(false);
         painelRegistro.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        txtMatricula.setBackground(new java.awt.Color(34, 102, 145));
-        txtMatricula.setBorder(null);
-        txtMatricula.setForeground(new java.awt.Color(255, 255, 255));
-        txtMatricula.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txtMatricula.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        txtMatricula.setPhColor(new java.awt.Color(255, 255, 255));
-        txtMatricula.setPlaceholder("MATRICULA");
-        txtMatricula.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtMatriculaKeyReleased(evt);
-            }
-        });
-        painelRegistro.add(txtMatricula, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 80, 30));
-
-        lbMatricula.setBackground(new java.awt.Color(34, 102, 145));
-        lbMatricula.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 10));
-        lbMatricula.setForeground(new java.awt.Color(255, 255, 255));
-        lbMatricula.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        lbMatricula.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/usuarios/cracha.png"))); // NOI18N
-        lbMatricula.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        lbMatricula.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
-        painelRegistro.add(lbMatricula, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 160, 50));
-
         txtNome.setBackground(new java.awt.Color(34, 102, 145));
         txtNome.setBorder(null);
         txtNome.setForeground(new java.awt.Color(255, 255, 255));
@@ -318,7 +289,7 @@ public class FrmUsuarios extends javax.swing.JInternalFrame {
                 txtNomeKeyReleased(evt);
             }
         });
-        painelRegistro.add(txtNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 40, 380, 30));
+        painelRegistro.add(txtNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 370, 30));
 
         lbNome.setBackground(new java.awt.Color(34, 102, 145));
         lbNome.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 10));
@@ -327,7 +298,7 @@ public class FrmUsuarios extends javax.swing.JInternalFrame {
         lbNome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/usuarios/user.png"))); // NOI18N
         lbNome.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         lbNome.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
-        painelRegistro.add(lbNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 30, 450, 50));
+        painelRegistro.add(lbNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 440, 50));
 
         txtCpf.setBackground(new java.awt.Color(34, 102, 145));
         txtCpf.setBorder(null);
@@ -338,7 +309,7 @@ public class FrmUsuarios extends javax.swing.JInternalFrame {
             ex.printStackTrace();
         }
         txtCpf.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        painelRegistro.add(txtCpf, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 40, 120, 30));
+        painelRegistro.add(txtCpf, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 40, 110, 30));
 
         lbCpf.setBackground(new java.awt.Color(34, 102, 145));
         lbCpf.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 10));
@@ -347,7 +318,7 @@ public class FrmUsuarios extends javax.swing.JInternalFrame {
         lbCpf.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/usuarios/cpf.png"))); // NOI18N
         lbCpf.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         lbCpf.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
-        painelRegistro.add(lbCpf, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 30, 200, 50));
+        painelRegistro.add(lbCpf, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 30, 190, 50));
 
         txtCelular.setBackground(new java.awt.Color(34, 102, 145));
         txtCelular.setBorder(null);
@@ -358,7 +329,7 @@ public class FrmUsuarios extends javax.swing.JInternalFrame {
             ex.printStackTrace();
         }
         txtCelular.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        painelRegistro.add(txtCelular, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, 120, 30));
+        painelRegistro.add(txtCelular, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 40, 120, 30));
 
         lbCelular.setBackground(new java.awt.Color(34, 102, 145));
         lbCelular.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 10));
@@ -367,13 +338,13 @@ public class FrmUsuarios extends javax.swing.JInternalFrame {
         lbCelular.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/usuarios/phone.png"))); // NOI18N
         lbCelular.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         lbCelular.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
-        painelRegistro.add(lbCelular, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 180, 50));
+        painelRegistro.add(lbCelular, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 30, 180, 50));
 
         cmbSexoUsuario.setBackground(new java.awt.Color(34, 102, 145));
         cmbSexoUsuario.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(35, 102, 145), 1, true));
         cmbSexoUsuario.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         cmbSexoUsuario.setOpaque(false);
-        painelRegistro.add(cmbSexoUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 110, 130, -1));
+        painelRegistro.add(cmbSexoUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 130, -1));
 
         lbSexoUsuario.setBackground(new java.awt.Color(34, 102, 145));
         lbSexoUsuario.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 10));
@@ -382,14 +353,14 @@ public class FrmUsuarios extends javax.swing.JInternalFrame {
         lbSexoUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/usuarios/sexo.png"))); // NOI18N
         lbSexoUsuario.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         lbSexoUsuario.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
-        painelRegistro.add(lbSexoUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 100, 200, 50));
+        painelRegistro.add(lbSexoUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 200, 50));
 
         cmbPerfil.setBackground(new java.awt.Color(34, 102, 145));
         cmbPerfil.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(35, 102, 145), 1, true));
         cmbPerfil.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "", "ADMINISTRADOR", "GERENTE", "PROFESSOR", "USUARIO" }));
         cmbPerfil.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         cmbPerfil.setOpaque(false);
-        painelRegistro.add(cmbPerfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 110, 150, -1));
+        painelRegistro.add(cmbPerfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 100, 150, -1));
 
         lbPerfil.setBackground(new java.awt.Color(34, 102, 145));
         lbPerfil.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 10));
@@ -398,7 +369,7 @@ public class FrmUsuarios extends javax.swing.JInternalFrame {
         lbPerfil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/usuarios/perfil.png"))); // NOI18N
         lbPerfil.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         lbPerfil.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
-        painelRegistro.add(lbPerfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 100, 220, 50));
+        painelRegistro.add(lbPerfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 90, 220, 50));
 
         txtDataCad.setEditable(false);
         txtDataCad.setBackground(new java.awt.Color(34, 102, 145));
@@ -546,10 +517,6 @@ public class FrmUsuarios extends javax.swing.JInternalFrame {
         usuarioBS.limparCampos();
     }//GEN-LAST:event_btnLimparActionPerformed
 
-    private void txtMatriculaKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtMatriculaKeyReleased
-        txtMatricula.setText(txtMatricula.getText().toUpperCase());
-    }//GEN-LAST:event_txtMatriculaKeyReleased
-
     private void txtNomeKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNomeKeyReleased
         txtNome.setText(txtNome.getText().toUpperCase());
     }//GEN-LAST:event_txtNomeKeyReleased
@@ -595,7 +562,6 @@ public class FrmUsuarios extends javax.swing.JInternalFrame {
     private swing.JLabelBordas lbDataCad;
     private swing.JLabelBordas lbId;
     private swing.JLabelBordas lbLogin;
-    private swing.JLabelBordas lbMatricula;
     private swing.JLabelBordas lbNome;
     public static swing.JLabelBordas lbPerfil;
     private swing.JLabelBordas lbPesquisar;
@@ -613,7 +579,6 @@ public class FrmUsuarios extends javax.swing.JInternalFrame {
     public static app.bolivia.swing.JCTextField txtDataCad;
     public static app.bolivia.swing.JCTextField txtId;
     public static app.bolivia.swing.JCTextField txtLogin;
-    public static app.bolivia.swing.JCTextField txtMatricula;
     public static app.bolivia.swing.JCTextField txtNome;
     public static app.bolivia.swing.JCTextField txtPesquisar;
     public static jpass.JRPasswordField txtSenha;

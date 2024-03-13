@@ -13,16 +13,15 @@ public class EstiloTabelaColumn {
 
     public void ajustarTabelaFrmUsuario() {
         tabelaUsuario.getColumnModel().getColumn(0).setPreferredWidth(70);
-        tabelaUsuario.getColumnModel().getColumn(1).setPreferredWidth(70);
-        tabelaUsuario.getColumnModel().getColumn(2).setPreferredWidth(250);
+        tabelaUsuario.getColumnModel().getColumn(1).setPreferredWidth(250);
+        tabelaUsuario.getColumnModel().getColumn(2).setPreferredWidth(100);
         tabelaUsuario.getColumnModel().getColumn(3).setPreferredWidth(100);
-        tabelaUsuario.getColumnModel().getColumn(4).setPreferredWidth(100);
-        tabelaUsuario.getColumnModel().getColumn(5).setPreferredWidth(70);
-        tabelaUsuario.getColumnModel().getColumn(6).setPreferredWidth(120);
-        tabelaUsuario.getColumnModel().getColumn(7).setPreferredWidth(100);
-        tabelaUsuario.getColumnModel().getColumn(8).setPreferredWidth(70);
+        tabelaUsuario.getColumnModel().getColumn(4).setPreferredWidth(70);
+        tabelaUsuario.getColumnModel().getColumn(5).setPreferredWidth(120);
+        tabelaUsuario.getColumnModel().getColumn(6).setPreferredWidth(100);
+        tabelaUsuario.getColumnModel().getColumn(7).setPreferredWidth(70);
+        tabelaUsuario.getColumnModel().getColumn(8).setPreferredWidth(130);
         tabelaUsuario.getColumnModel().getColumn(9).setPreferredWidth(130);
-        tabelaUsuario.getColumnModel().getColumn(10).setPreferredWidth(130);
     }
 
     public void ajustarTabelaFrmAtleta() {

@@ -9,7 +9,6 @@ import javax.swing.JTable;
 public abstract class PessoaMD {
 
     private String id;
-    private String matricula;
     private String nome;
     private String cpf;
     private String rg;
@@ -38,14 +37,6 @@ public abstract class PessoaMD {
 
     public void setId(String id) {
         this.id = id;
-    }
-
-    public String getMatricula() {
-        return matricula;
-    }
-
-    public void setMatricula(String matricula) {
-        this.matricula = matricula;
     }
 
     public String getNome() {
