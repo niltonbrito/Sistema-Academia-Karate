@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.1.final using JasperReports Library version 6.21.0-4f56c4f36cd19e17675219a9ac4692d5f0f13b06  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="laranja" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1b957422-ef2b-4012-ab91-18cef9acf306">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="AKR_DB"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="id" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT A.id_dangay as ID, 
+A.nome_abreviado_atleta as NOME, 
+A.clube_atleta as CLUBE, 
+B.faixa_exame as FAIXA, 
+B.data_exame as DATA_EXAME
+FROM tb_atletas as A
+ INNER JOIN tbexamesdangay as B 
+ ON B.id_atleta = A.id_atleta
+ WHERE B.id_exame = $P{id}]]>
+	</queryString>
+	<field name="ID" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="id_dangay"/>
+		<property name="com.jaspersoft.studio.field.label" value="ID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_atletas"/>
+	</field>
+	<field name="NOME" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nome_abreviado_atleta"/>
+		<property name="com.jaspersoft.studio.field.label" value="NOME"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_atletas"/>
+	</field>
+	<field name="CLUBE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="clube_atleta"/>
+		<property name="com.jaspersoft.studio.field.label" value="CLUBE"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_atletas"/>
+	</field>
+	<field name="FAIXA" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="faixa_exame"/>
+		<property name="com.jaspersoft.studio.field.label" value="FAIXA"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbexamesdangay"/>
+	</field>
+	<field name="DATA_EXAME" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="data_exame"/>
+		<property name="com.jaspersoft.studio.field.label" value="DATA_EXAME"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbexamesdangay"/>
+	</field>
+	<background>
+		<band height="555" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<image scaleImage="FillFrame">
+				<reportElement x="-20" y="0" width="841" height="555" uuid="12a3078b-f08f-4121-a06d-576390d937e0">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA["/imagens/certificados/verde.jpg"]]></imageExpression>
+			</image>
+			<frame>
+				<reportElement x="75" y="220" width="650" height="150" uuid="99355739-f50b-4ae2-86e3-c0bb31378a8c"/>
+				<staticText>
+					<reportElement positionType="Float" x="20" y="40" width="180" height="30" uuid="a1b094fd-7fcd-474e-ab73-b7f2d20c9371">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="232af671-691a-4af6-a113-7a5f3667a8b8"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Tahoma" size="20" isBold="true"/>
+						<paragraph lineSpacing="Fixed"/>
+					</textElement>
+					<text><![CDATA[o título de faixa]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="20" y="10" width="269" height="30" uuid="ad84f40f-edb8-4ba8-8dec-3b610752ada1">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8517cdc3-28a4-4dca-9502-e0b518714188"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Tahoma" size="20" isBold="true"/>
+						<paragraph lineSpacing="Fixed"/>
+					</textElement>
+					<text><![CDATA[Este documento confere a]]></text>
+				</staticText>
+				<textField textAdjust="ScaleFont">
+					<reportElement positionType="Float" x="290" y="10" width="330" height="30" uuid="d66b2c65-5e6d-46ac-bd03-ee613302965f">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8517cdc3-28a4-4dca-9502-e0b518714188"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Tahoma" size="20" isBold="true"/>
+						<paragraph lineSpacing="Single"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{NOME}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement positionType="Float" x="200" y="40" width="130" height="30" uuid="007b81f6-10c3-4d8a-8dbd-34f575b119ef">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="232af671-691a-4af6-a113-7a5f3667a8b8"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Tahoma" size="20" isBold="true"/>
+						<paragraph lineSpacing="Fixed"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{FAIXA}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" x="330" y="40" width="240" height="30" uuid="1eb91adc-728f-46e3-a443-96245715db28">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f213f204-fa2b-4c02-89a8-2f00fedf5e7b"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Tahoma" size="20" isBold="true"/>
+						<paragraph lineSpacing="Fixed"/>
+					</textElement>
+					<text><![CDATA[3º Kyu da Associação]]></text>
+				</staticText>
+				<textField textAdjust="ScaleFont">
+					<reportElement positionType="Float" x="20" y="74" width="330" height="30" uuid="8520a325-3590-4f8c-a33e-7caef9535f0f">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f213f204-fa2b-4c02-89a8-2f00fedf5e7b"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Tahoma" size="20" isBold="true"/>
+						<paragraph lineSpacing="Single"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{CLUBE}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" x="350" y="74" width="290" height="30" uuid="858f86f3-f0a6-4db0-b8cb-55112f5fcae9">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="db459936-2375-4f21-ad59-7feaeb2dda16"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Tahoma" size="20" isBold="true"/>
+						<paragraph lineSpacing="Fixed"/>
+					</textElement>
+					<text><![CDATA[, concedido por sua atuação]]></text>
+				</staticText>
+				<textField>
+					<reportElement positionType="Float" x="400" y="104" width="200" height="30" uuid="7000110c-4306-4659-bcd6-1bccdfad06bc">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="db459936-2375-4f21-ad59-7feaeb2dda16"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Tahoma" size="20" isBold="true"/>
+						<paragraph lineSpacing="Fixed"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{DATA_EXAME}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" x="20" y="104" width="380" height="30" uuid="833e59fe-c7b1-4400-9ddb-2a12b9c5cd96">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="db459936-2375-4f21-ad59-7feaeb2dda16"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Tahoma" size="20" isBold="true"/>
+						<paragraph lineSpacing="Fixed"/>
+					</textElement>
+					<text><![CDATA[no exame de graduação realizado em ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="620" y="10" width="6" height="30" uuid="7ca44c16-628c-449d-8b40-02c259ebf65a"/>
+					<textElement>
+						<font fontName="Tahoma" size="20" isBold="true"/>
+					</textElement>
+					<text><![CDATA[,]]></text>
+				</staticText>
+			</frame>
+			<staticText>
+				<reportElement x="590" y="50" width="30" height="30" uuid="cb5226a2-a3e3-496d-bbf6-914163ff167f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d2fd49be-5f29-4d79-860b-49482e7d7964"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nº]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="620" y="50" width="100" height="30" uuid="5b01aa0c-553f-4825-bdb3-055304e10131">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d2fd49be-5f29-4d79-860b-49482e7d7964"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="22" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ID}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="430" y="380" width="139" height="30" uuid="5dfc5d59-cbb1-4f44-bb3b-ae4e821b743b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Salvador - BA]]></text>
+			</staticText>
+			<textField pattern="dd MMMMM yyyy">
+				<reportElement x="570" y="380" width="190" height="30" uuid="25aa1957-7bfc-4826-b9dd-16dea08e7fba"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="18" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</background>
+</jasperReport>

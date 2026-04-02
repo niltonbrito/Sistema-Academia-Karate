@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.1.final using JasperReports Library version 6.21.0-4f56c4f36cd19e17675219a9ac4692d5f0f13b06  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="yudansha" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6f5e6df7-cb24-4d6d-bf01-62e98a39a700">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="AKR_DB"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="id" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT A.id_yudansha as ID, 
+A.nome_abreviado_atleta as NOME, 
+A.clube_atleta as CLUBE, 
+B.faixa_exame as FAIXA, 
+B.data_exame as DATA_EXAME
+FROM tb_atletas as A
+ INNER JOIN tbexamesyudansha as B 
+ ON B.id_atleta = A.id_atleta
+ WHERE B.id_exame = $P{id}]]>
+	</queryString>
+	<field name="ID" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="id_yudansha"/>
+		<property name="com.jaspersoft.studio.field.label" value="ID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_atletas"/>
+	</field>
+	<field name="NOME" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nome_abreviado_atleta"/>
+		<property name="com.jaspersoft.studio.field.label" value="NOME"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_atletas"/>
+	</field>
+	<field name="CLUBE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="clube_atleta"/>
+		<property name="com.jaspersoft.studio.field.label" value="CLUBE"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tb_atletas"/>
+	</field>
+	<field name="FAIXA" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="faixa_exame"/>
+		<property name="com.jaspersoft.studio.field.label" value="FAIXA"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbexamesyudansha"/>
+	</field>
+	<field name="DATA_EXAME" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="data_exame"/>
+		<property name="com.jaspersoft.studio.field.label" value="DATA_EXAME"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbexamesyudansha"/>
+	</field>
+	<background>
+		<band height="555" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<image scaleImage="FillFrame">
+				<reportElement x="-20" y="0" width="842" height="555" uuid="ccaab1bb-c8ea-4e32-ba00-34d177b2cc19"/>
+				<imageExpression><![CDATA["/imagens/certificados/yudansha.jpg"]]></imageExpression>
+			</image>
+			<textField textAdjust="ScaleFont">
+				<reportElement positionType="Float" x="10" y="230" width="550" height="70" uuid="cbe69e00-cd4c-4dc5-8f83-70b61aaaef3d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8517cdc3-28a4-4dca-9502-e0b518714188"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="40" isBold="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NOME}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="10" y="312" width="180" height="21" forecolor="#7F7F7F" uuid="4e72581c-20f6-48b3-b0d3-c6f333dc7b58">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f213f204-fa2b-4c02-89a8-2f00fedf5e7b"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="16" isBold="false"/>
+					<paragraph lineSpacing="Fixed"/>
+				</textElement>
+				<text><![CDATA[A titulação de faixa preta ]]></text>
+			</staticText>
+			<textField>
+				<reportElement positionType="Float" x="190" y="312" width="65" height="20" forecolor="#7F7F7F" uuid="3a6cb811-0ad8-4df8-a634-fc6450d80b66">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="232af671-691a-4af6-a113-7a5f3667a8b8"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="16" isBold="true"/>
+					<paragraph lineSpacing="Fixed"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FAIXA}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont">
+				<reportElement positionType="Float" x="435" y="311" width="150" height="20" forecolor="#7F7F7F" uuid="f0059b50-4c60-4db5-b87e-62e149ac82a8">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f213f204-fa2b-4c02-89a8-2f00fedf5e7b"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="14" isBold="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CLUBE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="401" y="341" width="135" height="20" forecolor="#7F7F7F" uuid="8b5b8d7a-1fe0-4371-a469-04b9a309449b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="db459936-2375-4f21-ad59-7feaeb2dda16"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="14" isBold="true"/>
+					<paragraph lineSpacing="Fixed"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DATA_EXAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="620" y="254" width="140" height="56" forecolor="#FFFFFF" uuid="490b34fb-b211-4632-8cda-a13d64942a04">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d2fd49be-5f29-4d79-860b-49482e7d7964"/>
+					<property name="com.jaspersoft.studio.unit.tabStopWidth" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="40" isBold="true"/>
+					<paragraph tabStopWidth="40"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ID}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd MMMMM yyyy">
+				<reportElement x="560" y="520" width="232" height="30" forecolor="#FFFFFF" uuid="2fa3d2b0-d5cf-4bc9-8eba-2694a9a27b83"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="22" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="401" y="520" width="159" height="29" forecolor="#FFFFFF" uuid="42ef3539-35e2-4437-9114-7b7c9721a587"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Salvador - BA,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="255" y="311" width="180" height="21" forecolor="#7F7F7F" uuid="fb922337-6959-4f28-9307-f3cc79143461">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f213f204-fa2b-4c02-89a8-2f00fedf5e7b"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="16" isBold="false"/>
+					<paragraph lineSpacing="Fixed"/>
+				</textElement>
+				<text><![CDATA[da Associação de Karatê]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="10" y="340" width="391" height="21" forecolor="#7F7F7F" uuid="8a7e1b54-2479-4f3f-8acf-5b0b7427f08c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f213f204-fa2b-4c02-89a8-2f00fedf5e7b"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="16" isBold="false"/>
+					<paragraph lineSpacing="Fixed"/>
+				</textElement>
+				<text><![CDATA[por sua atuação no exame de graduação realizado em ]]></text>
+			</staticText>
+		</band>
+	</background>
+</jasperReport>
